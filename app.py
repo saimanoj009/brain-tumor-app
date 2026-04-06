@@ -16,7 +16,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 # -------------------------------
 # Load model & classes
 # -------------------------------
-model = load_model("clean_model.h5", compile=False)
+model = load_model("final_model.h5", compile=False)
 model.predict(np.zeros((1, 224, 224, 3)))  # force build
 
 with open("class_names.json", "r") as f:
