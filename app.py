@@ -16,7 +16,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 # -------------------------------
 # Load model & classes
 # -------------------------------
-model = load_model("brain_tumor_model.keras")
+model = load_model("brain_tumor_model.keras", compile=False)
 model.predict(np.zeros((1, 224, 224, 3)))  # force build
 
 with open("class_names.json", "r") as f:
